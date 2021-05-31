@@ -8,43 +8,100 @@ class DenmauApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.teal,
         appBar: AppBar(
-          title: Text('I Am Very Rich'),
-          backgroundColor: Colors.black12,
+          title: Text('Denmau'),
+          backgroundColor: Colors.teal,
         ),
-        body: SafeArea(
+        body: Container(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(
-                height: 30.0,
+              // make Column occupy max width
+              Container(
+                width: double.infinity,
               ),
               CircleAvatar(
                 radius: 50.0,
                 backgroundColor: Colors.teal,
-                backgroundImage: AssetImage('images/seku.png'),
+                backgroundImage: AssetImage('images/cloud.png'),
               ),
               Text(
-                'Denmau',
+                'Dennis Kamau',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
+                  fontFamily: 'Comfortaa',
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+
+              Text(
+                'Full Stack Web Developer',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15.0,
+                  fontFamily: 'Fira Code',
                 ),
               ),
               Text(
                 'Machine Learning Engineer',
-                textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 15.0,
+                  fontFamily: 'Fira Code',
                 ),
               ),
-              Container(
-                width: double.infinity,
-              )
+              SizedBox(
+                width: 150.0,
+                child: Divider(
+                  color: Colors.yellow,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.all(10.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.call,
+                      color: Colors.teal,
+                    ),
+                    title: Text('+254 759 360 020'),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.all(10.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    title: Text('dmkamau475@gmail.com'),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.all(10.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.web,
+                      color: Colors.teal,
+                    ),
+                    title: Text('www.denmau.me'),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
